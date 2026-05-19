@@ -1,0 +1,8 @@
+/**
+ * Component classes registered by plugins.
+ */
+
+@import 'print.css';
+
+
+@tailwind components;
