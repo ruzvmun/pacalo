@@ -8,6 +8,7 @@
     "start": "vite  --host 0.0.0.0 --port 3002",
     "start:high": "node --inspect --max-old-space-size=8192 node_modules/vite/bin/vite.js --host 0.0.0.0 --port 3000",
     "build": "rm -rf dist && tsc && vite build",
+    "postbuild": "cp dist/index.html dist/404.html",
     "preview": "vite preview",
     "test": "vitest run",
     "format": "prettier --write .",
