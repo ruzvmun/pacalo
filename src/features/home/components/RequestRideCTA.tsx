@@ -12,7 +12,7 @@ const RequestRideCTA: React.FC<{ className?: string }> = ({ className = '' }) =>
             <p className="text-white/90 mt-1">Book now and we'll get you there safely and on time.</p>
           </div>
           <div className="flex gap-3">
-            <Link to="/request-ride" className="px-6 py-3 rounded-xl bg-white text-pacalo-blue font-bold hover:bg-gray-100 transition-colors">Request a Ride</Link>
+            <Link to="/request" className="px-6 py-3 rounded-xl bg-white text-pacalo-blue font-bold hover:bg-gray-100 transition-colors">Request a Ride</Link>
             <a href={`tel:${CONTACT.PHONE}`} className="px-6 py-3 rounded-xl bg-pacalo-gold text-pacalo-blue font-bold hover:bg-yellow-500 transition-colors">Call {CONTACT.PHONE_FORMATTED}</a>
           </div>
         </div>

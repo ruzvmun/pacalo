@@ -33,7 +33,7 @@ const FloatingActionButton: React.FC = () => {
     {
       icon: FaCalendarAlt,
       label: 'Book',
-      href: '/request-ride',
+      href: '/request',
       bgColor: 'bg-purple-600',
       hoverColor: 'hover:bg-purple-700',
       internal: true,
