@@ -25,7 +25,7 @@ const ServicesPage: React.FC = () => {
                 <h2 className="text-xl md:text-2xl font-bold">Ready to request a ride?</h2>
                 <p className="text-gray-600">Book now and we'll get you there safely and on time.</p>
               </div>
-              <Link to="/request-ride" className="px-6 py-3 rounded-xl bg-pacalo-blue text-white font-bold hover:bg-blue-700 transition-colors">Request a Ride</Link>
+              <Link to="/request" className="px-6 py-3 rounded-xl bg-pacalo-blue text-white font-bold hover:bg-blue-700 transition-colors">Request a Ride</Link>
             </div>
           </div>
         </section>

@@ -1,6 +1,6 @@
 import type React from 'react'
-import { FaEnvelope, FaPhone, FaWhatsapp } from 'react-icons/fa'
-import BookingBarForm from './components/BookingBarForm'
+import { Link } from 'react-router-dom'
+import { FaCarSide } from 'react-icons/fa'
 import CertificationsStrip from './components/CertificationsStrip'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay, EffectFade } from 'swiper/modules'
@@ -8,7 +8,6 @@ import 'swiper/swiper-bundle.css'
 import { GALLERY_IMAGES } from '../gallery/data/galleryData'
 import ReviewsStripCarousel from '../reviews/components/ReviewsStripCarousel'
 import { getAssetPath } from '../../utils/assets'
-import { CONTACT } from '@/@pacalo.core/data/constants'
 
 interface HighlightTextProps {
   children: React.ReactNode
@@ -94,39 +93,20 @@ const HeroSection: React.FC = () => (
               We provide comprehensive intercity, inter-county, and interstate services to ensure you get safely to any destination.
             </p>
 
-            <div className="grid grid-cols-3 md:grid-cols-4 gap-3">
-              <a
-                href={`tel:${CONTACT.PHONE}`}
-                className="w-full flex items-center justify-center px-4 py-3 bg-pacalo-blue text-white font-bold rounded-xl hover:bg-blue-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center md:justify-start">
+              <Link
+                to="/request"
+                className="group inline-flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-pacalo-blue to-blue-700 text-white font-extrabold text-lg md:text-xl rounded-2xl hover:from-blue-700 hover:to-pacalo-blue transform hover:scale-105 transition-all duration-200 shadow-xl hover:shadow-2xl"
               >
-                <FaPhone className="w-4 h-4 mr-2 text-pacalo-gold" />
-                <span className="hidden sm:inline">Call Us </span>
-                <span className="sm:hidden"> Call</span>
-              </a>
-              <a
-                href={CONTACT.WHATSAPP_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full flex items-center justify-center px-4 py-3 bg-green-600 text-white font-bold rounded-xl hover:bg-green-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
-              >
-                <FaWhatsapp className="w-4 h-4 mr-2" />
-                <span className="hidden sm:inline">WhatsApp</span>
-                <span className="sm:hidden">Chat</span>
-              </a>
-              <a
-                href={`mailto:${CONTACT.EMAIL}`}
-                className="w-full flex items-center justify-center px-4 py-3 bg-pacalo-gold text-white font-bold rounded-xl hover:bg-yellow-600 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
-              >
-                <FaEnvelope className="w-4 h-4 mr-2" />
-                <span className="hidden sm:inline">Email Us</span>
-                <span className="sm:hidden"> Email</span>
-              </a>
-
+                <FaCarSide className="w-6 h-6 text-pacalo-gold group-hover:translate-x-1 transition-transform" />
+                <span>Request a Ride</span>
+              </Link>
               <a
                 href="#services"
-                className="col-span-2 md:col-span-1 w-full hidden md:flex items-center justify-center px-4 py-3 bg-white text-pacalo-blue font-bold rounded-xl border-2 border-pacalo-blue hover:bg-pacalo-blue hover:text-white transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/80 text-pacalo-blue font-bold text-lg md:text-xl rounded-2xl border-2 border-pacalo-blue hover:bg-pacalo-blue hover:text-white transition-all duration-200 shadow-md hover:shadow-lg"
               >
                 <span>Our Services</span>
+                <span aria-hidden className="transition-transform group-hover:translate-x-1">→</span>
               </a>
             </div>
           </div>
@@ -142,9 +122,6 @@ const HeroSection: React.FC = () => (
       </div>
     </div>
 
-    <div className="hidden md:block">
-      <BookingBarForm />
-    </div>
   </div>
 )
 

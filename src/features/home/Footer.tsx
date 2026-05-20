@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="bg-gradient-to-br from-gray-900 via-gray-800 to-black py-16 lg:py-20 text-white">
+    <footer id="contact" className="bg-gradient-to-br from-gray-900 via-gray-800 to-black py-16 lg:py-20 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16 mb-12">
           {/* Logo and Company Info */}
@@ -66,7 +66,7 @@ const Footer: React.FC = () => {
               </a>
               <div className="pt-4 flex justify-center md:justify-end">
                 <Link
-                  to="/request-ride"
+                  to="/request"
                   className="inline-block px-6 py-3 bg-pacalo-gold hover:bg-yellow-500 text-pacalo-blue font-bold rounded-lg transition-colors"
                 >
                   Request a Ride
