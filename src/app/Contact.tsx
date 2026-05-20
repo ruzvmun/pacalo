@@ -3,6 +3,7 @@ import { Navigation } from '@/features/home'
 import Footer from '@/features/home/Footer'
 import { FaPhone, FaEnvelope, FaWhatsapp, FaClock } from 'react-icons/fa'
 import RequestRideCTA from '@/features/home/components/RequestRideCTA'
+import BambiTripRequest from '@/features/home/components/BambiTripRequest'
 import { CONTACT } from '@/@pacalo.core/data/constants'
 
 const ContactPage: React.FC = () => {
@@ -44,6 +45,12 @@ const ContactPage: React.FC = () => {
                   <div className="text-sm text-gray-500">Monday - Sunday</div>
                 </div>
               </div>
+            </div>
+
+            <div className="mt-12">
+              <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-3">Request a Ride</h2>
+              <p className="text-gray-600 mb-6">Prefer to book online? Fill out the trip request form below and we'll be in touch.</p>
+              <BambiTripRequest />
             </div>
           </div>
         </div>

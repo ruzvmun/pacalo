@@ -52,9 +52,7 @@ const Navigation: React.FC = () => {
       { href: '/faq', label: 'FAQ', isRoute: true }
     ]
 
-  const contactItem: NavigationItem = isHome
-    ? { href: '#contact', label: 'Contact Us' }
-    : { href: '/contact', label: 'Contact Us', isRoute: true }
+  const contactItem: NavigationItem = { href: '/contact', label: 'Contact Us', isRoute: true }
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
   const closeMenu = () => setIsMenuOpen(false)
@@ -94,7 +92,7 @@ const Navigation: React.FC = () => {
               <Link
                 to="/request"
                 title="Request a Ride"
-                className="flex items-center gap-2 px-5 py-3 bg-pacalo-gold hover:bg-yellow-400 text-pacalo-blue font-bold transition-colors border-r border-pacalo-blue/20"
+                className="flex items-center gap-2 px-5 py-3 bg-pacalo-blue hover:bg-blue-50 text-white hover:text-pacalo-blue font-bold transition-colors border-r border-pacalo-blue/20"
               >
                 <FaCarSide className="text-lg" />
                 <span className="text-sm whitespace-nowrap">Request a Ride</span>
